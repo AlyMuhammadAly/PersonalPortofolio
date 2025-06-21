@@ -1,4 +1,4 @@
-import { BellRing, Briefcase, Code, User } from "lucide-react";
+import { Briefcase, Code, User } from "lucide-react";
 import StarBackground from "./StarBackground";
 
 function AboutSection() {

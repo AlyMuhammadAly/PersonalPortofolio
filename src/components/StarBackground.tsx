@@ -10,22 +10,22 @@ interface Star {
   animationDuration: number;
 }
 
-interface Meteor {
-  id: number;
-  size: number;
-  x: number;
-  y: number;
-  delay: string;
-  animationDuration: number;
-}
+// interface Meteor {
+//   id: number;
+//   size: number;
+//   x: number;
+//   y: number;
+//   delay: string;
+//   animationDuration: number;
+// }
 
 function StarBackground() {
   const [stars, setStars] = useState(Array<Star>);
-  const [meteors, setMeteors] = useState(Array<Meteor>);
+  // const [meteors, setMeteors] = useState(Array<Meteor>);
 
   useEffect(() => {
     generateStars();
-    generateMeteros();
+    // generateMeteros();
 
     const handleResize = () => {
       generateStars();
@@ -56,23 +56,23 @@ function StarBackground() {
     setStars(newStars);
   };
 
-  const generateMeteros = () => {
-    const numberOMeteors = 20;
+  // const generateMeteros = () => {
+  //   const numberOMeteors = 20;
 
-    const newMeteors = [];
-    for (let i = 0; i < numberOMeteors; i++) {
-      newMeteors.push({
-        id: i,
-        size: Math.random() * 2 + 1,
-        x: Math.random() * 100,
-        y: Math.random() * 20,
-        delay: String(Math.random() * 15),
-        animationDuration: Math.random() * 3 + 3,
-      } as Meteor);
-    }
+  //   const newMeteors = [];
+  //   for (let i = 0; i < numberOMeteors; i++) {
+  //     newMeteors.push({
+  //       id: i,
+  //       size: Math.random() * 2 + 1,
+  //       x: Math.random() * 100,
+  //       y: Math.random() * 20,
+  //       delay: String(Math.random() * 15),
+  //       animationDuration: Math.random() * 3 + 3,
+  //     } as Meteor);
+  //   }
 
-    setMeteors(newMeteors);
-  };
+  //   setMeteors(newMeteors);
+  // };
 
   return (
     <div>

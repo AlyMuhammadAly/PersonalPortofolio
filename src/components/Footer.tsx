@@ -1,5 +1,4 @@
 import { ArrowUp } from "lucide-react";
-import StarBackground from "./StarBackground";
 
 function Footer() {
   return (
