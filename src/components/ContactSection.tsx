@@ -1,24 +1,31 @@
 import { Instagram, Linkedin, Mail, MapPin, Phone, Send } from "lucide-react";
-import { useToast } from "../hooks/use-toaster";
 import { cn } from "../lib/utils";
 import { useState } from "react";
 import StarBackground from "./StarBackground";
+import Toast from "typescript-toastify";
 
 function ContactSection() {
-  const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
 
     setIsSubmitting(true);
 
     setTimeout(() => {
-      toast({
-        title: "Message sent!",
-        description:
+      new Toast({
+        position: "bottom-right",
+        toastMsg:
           "Thank you for your message. I will get back to you very soon.",
+        autoCloseTime: 2000,
+        canClose: true,
+        showProgress: true,
+        pauseOnHover: true,
+        pauseOnFocusLoss: true,
+        type: "default",
+        theme: "light",
       });
+
       setIsSubmitting(false);
     }, 1500);
   };
