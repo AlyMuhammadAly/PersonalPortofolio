@@ -1,4 +1,3 @@
-import StarBackground from "../components/StarBackground";
 import { cn } from "../lib/utils";
 
 function NotFound() {
